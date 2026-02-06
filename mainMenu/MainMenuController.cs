@@ -118,15 +118,7 @@ public class MainMenuController : MonoBehaviour
         
         Debug.Log($"Loading scene: {gameSceneName}");
         
-        // Use LoadingScreen if available, otherwise load normally
-        if (LoadingScreen.Instance != null)
-        {
-            LoadingScreen.LoadScene(gameSceneName);
-        }
-        else
-        {
-            SceneManager.LoadScene(gameSceneName);
-        }
+        SceneManager.LoadScene(gameSceneName);
         
         isProcessingButtonClick = false;
     }
@@ -150,15 +142,7 @@ public class MainMenuController : MonoBehaviour
         
         Debug.Log($"Loading scene: {leaderboardsSceneName}");
         
-        // Use LoadingScreen if available, otherwise load normally
-        if (LoadingScreen.Instance != null)
-        {
-            LoadingScreen.LoadScene(leaderboardsSceneName);
-        }
-        else
-        {
-            SceneManager.LoadScene(leaderboardsSceneName);
-        }
+        SceneManager.LoadScene(leaderboardsSceneName);
         
         isProcessingButtonClick = false;
     }
